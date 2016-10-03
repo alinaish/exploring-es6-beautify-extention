@@ -1,7 +1,6 @@
 {
   "manifest_version": 2,
-
-  "name": "Exploring ES6 beutify",
+  "name": "Exploring ES6 beautify",
   "description": "Change default css styles in online version of \"Exploring ES6: Upgrade to the next version of JavaScript\" by Dr. Axel Rauschmayer book",
   "version": "1.0",
 
@@ -12,5 +11,11 @@
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://exploringjs.com/es6/*"],
+      "css" : ["beautify.css", "open-sans.css"]
+    }
   ]
 }
